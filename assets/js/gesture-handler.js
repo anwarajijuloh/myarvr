@@ -23,7 +23,7 @@ AFRAME.registerComponent("gesture-handler", {
             document
               .querySelector(".direct-world")
               .addEventListener("click", function () {
-                window.location.href = '/myworld.html';
+                window.location.href = 'myarvr/myworld.html';
             });
         };
       });
