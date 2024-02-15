@@ -14,12 +14,12 @@ body {
   z-index: 10;
 }
 
-.say-hi-button {
+.direct-world {
   padding: 0.25em;
   border-radius: 4px;
   border: none;
   background: white;
   color: black;
-  width: 4em;
-  height: 2em;
+  width: 8em;
+  height: 4em;
 }

@@ -10,11 +10,15 @@
 
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
     <script src="assets/js/gesture-detector.js"></script>
     <script src="assets/js/gesture-handler.js"></script>
 </head>
 
 <body>
+    <div class="buttons">
+        <button class="direct-world">GO MY HOME!</button>
+    </div>
     <a-scene
       arjs
       embedded
@@ -25,29 +29,34 @@
     >
       <a-assets>
         <a-asset-item
-          id="bowser"
+          id="duck"
           src="assets/models/lowpoly_duck_animated.glb"
         >
         </a-asset-item>
       </a-assets>
 
-      <a-marker
-        preset="hiro"
+      <a-nft
+        preset="nft"
+        src="assets/nft/koala/koala"
+        smooth="true"
+        smoothCount="10"
+        smoothTolerance=".01"
+        smoothThreshold="5"
         raycaster="objects: .clickable"
         emitevents="true"
         cursor="fuse: false; rayOrigin: mouse;"
         id="markerA"
       >
         <a-entity
-          id="bowser-model"
-          gltf-model="#bowser"
+          id="duck-model"
+          gltf-model="#duck"
           position="0 0 0"
-          scale="0.05 0.05 0.05"
+          scale="0.5 0.5 0.5"
           class="clickable"
           gesture-handler
         >
         </a-entity>
-      </a-marker>
+      </a-nft>
       <a-entity camera></a-entity>
     </a-scene>
 </body>
