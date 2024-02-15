@@ -18,14 +18,6 @@ AFRAME.registerComponent("gesture-handler", {
   
       this.el.sceneEl.addEventListener("markerFound", (e) => {
         this.isVisible = true;
-        window.onload = function () {
-            loading.style.visibility = "visible";
-            document
-              .querySelector(".direct-world")
-              .addEventListener("click", function () {
-                window.location.href = 'myarvr/myworld.html';
-            });
-        };
       });
   
       this.el.sceneEl.addEventListener("markerLost", (e) => {
