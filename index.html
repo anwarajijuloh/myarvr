@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-extras.animation-mixer@3.4.0/dist/aframe-extras.animation-mixer.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
 </head>
 <body>
     <a-scene vr-mode-ui="enable:false" arjs>
+        <a-assets>
+            <a-asset-item id="flower" src="myarvr/assets/models/lowpoly_flower/scene.gltf"></a-asset-item>
+        </a-assets>
+
         <a-nft type="nft" url="myarvr/assets/nft/koala/koala" smooth="true">
             <a-box scale="100 100 100" position="0 0 0"></a-box>
         </a-nft>
+
+        <a-gltf-model src="#flower" position="0 0 -5"></a-gltf-model>
+
+        <a-camera>
+            <a-cursor></a-cursor>
+        </a-camera>
     </a-scene>
 </body>
 </html>
