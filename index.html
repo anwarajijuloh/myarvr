@@ -9,7 +9,6 @@
 
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
     <script src="assets/js/gesture-detector.js"></script>
     <script src="assets/js/gesture-handler.js"></script>
 </head>
@@ -17,7 +16,7 @@
     <a-scene vr-mode-ui="enable:false" id="scene" renderer="logarithmicDepthBuffer: true" arjs embedded gesture-detector>
         <a-assets>
             <a-asset-item id="flower" src="myarvr/assets/models/lowpoly_flower/scene.gltf"></a-asset-item>
-            <a-asset-item id="duck" src="assets/models/lowpoly_duck_animated.glb"></a-asset-item>
+            <a-asset-item id="duck" src="myarvr/assets/models/lowpoly_duck_animated.glb"></a-asset-item>
         </a-assets>
 
         <a-marker
