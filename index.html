@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <title>Gesture Interactions - A-Frame & AR.js</title>
@@ -12,30 +13,25 @@
     <script src="assets/js/gesture-detector.js"></script>
     <script src="assets/js/gesture-handler.js"></script>
 </head>
+
 <body>
-    <a-scene vr-mode-ui="enable:false" id="scene" renderer="logarithmicDepthBuffer: true" arjs embedded gesture-detector>
+    <div class="buttons">
+        <button class="say-hi-button">SAY HI!</button>
+    </div>
+    <a-scene vr-mode-ui="enable:false" id="scene" renderer="logarithmicDepthBuffer: true" arjs embedded
+        gesture-detector>
         <a-assets>
             <a-asset-item id="flower" src="myarvr/assets/models/lowpoly_flower/scene.gltf"></a-asset-item>
             <a-asset-item id="duck" src="myarvr/assets/models/lowpoly_duck_animated.glb"></a-asset-item>
         </a-assets>
 
-        <a-marker
-        preset="hiro"
-        raycaster="objects: .clickable"
-        emitevents="true"
-        cursor="fuse: false; rayOrigin: mouse;"
-        id="markerA"
-      >
-        <a-entity
-          id="duck-model"
-          gltf-model="#duck"
-          position="0 0 0"
-          scale="0.05 0.05 0.05"
-          class="clickable"
-          gesture-handler
-        >
-        </a-entity>
-      </a-marker>
+        <a-marker preset="hiro" raycaster="objects: .clickable" emitevents="true"
+            cursor="fuse: false; rayOrigin: mouse;" id="markerA">
+            <a-entity id="duck-model" gltf-model="#duck" position="0 0 0" scale="0.05 0.05 0.05" class="clickable"
+                gesture-handler>
+            </a-entity>
+        </a-marker>
     </a-scene>
 </body>
+
 </html>
