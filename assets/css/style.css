@@ -15,6 +15,7 @@ body {
 }
 
 .direct-world {
+  visibility: hidden;
   padding: 0.25em;
   border-radius: 4px;
   border: none;
